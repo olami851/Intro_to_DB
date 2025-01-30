@@ -1,4 +1,4 @@
-CREATE DATABASE alx_book_store;
+CREATE DATABASE IF NOT EXISTS alx_book_store;
 
 USE alx_book_store;
 
@@ -8,7 +8,7 @@ SELECT DATABASE();
 
 -- Books Table: Stores information about books available in the bookstore.
 
-CREATE TABLE Books(
+CREATE TABLE IF NOT EXISTS Books(
     book_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR (130),
     author_id INT,
@@ -18,7 +18,7 @@ CREATE TABLE Books(
 );
 
 -- Authors Table: Stores information about authors.
-CREATE TABLE Authors(
+CREATE TABLE IF NOT EXISTS Authors(
     author_id INT AUTO_INCREMENT PRIMARY KEY,
     author_name VARCHAR(215)
 );
@@ -29,7 +29,7 @@ SELECT* FROM Authors;
 
 
 -- Customers Table: Stores information about customers.
-CREATE TABLE Customers(
+CREATE TABLE IF NOT EXISTS Customers(
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_name VARCHAR(215),
     email VARCHAR(215),
@@ -37,7 +37,7 @@ CREATE TABLE Customers(
 );
 
 -- Orders Table: Stores information about orders placed by customers.
-CREATE TABLE Orders(
+CREATE TABLE IF NOT EXISTS Orders(
     order_id INT PRIMARY KEY,
     customer_id INT, 
     order_date DATE,
@@ -45,7 +45,7 @@ CREATE TABLE Orders(
 );
 
 -- Order_Details Table: Stores information about the books included in each order.
-CREATE TABLE Order_Details(
+CREATE TABLE IF NOT EXISTS Order_Details(
     order_detail_id INT PRIMARY KEY,
     order_id INT,
     book_id INT,
