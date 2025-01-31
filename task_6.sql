@@ -35,3 +35,5 @@ VALUES(
     'nkamolu@sandtech.com', 
     '126 Happiness Ave.'
 );
+
+SELECT* FROM customers;

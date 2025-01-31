@@ -13,4 +13,4 @@ VALUES(
 );
 
 
-
+SELECT* FROM customers;
